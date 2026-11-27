@@ -1,0 +1,8 @@
+# 锁文件、插件包、上传临时文件都不给直链。
+<IfModule mod_authz_core.c>
+    Require all denied
+</IfModule>
+<IfModule !mod_authz_core.c>
+    Order allow,deny
+    Deny from all
+</IfModule>
